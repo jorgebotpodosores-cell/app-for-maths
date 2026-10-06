@@ -1,3 +1,11 @@
+import streamlit as str
+
+# Set up the web page title
+str.set_page_config(page_title="Encontrador de dígitos Pi", page_icon="🔢")
+str.title("🔢 Buscador de 1 millón de dígitos Pi")
+str.write("Teclea una posición para calcular al instante el digito de Pi en esa posición.")
+
+# Function to safely load the digits
 @str.cache_data # This caches the file in RAM so it loads instantly for everyone
 def load_pi():
     try:
@@ -25,5 +33,4 @@ else:
 
     # Display the result in a clean metric visual box
     str.metric(label=f"Dígito en posición {position:,}", value=target_digit)
-
 
